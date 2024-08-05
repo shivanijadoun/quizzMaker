@@ -1,5 +1,5 @@
-// app/Modal.js
 'use client'
+
 import React from 'react';
 
 export default function Modal({ show, onClose, children }) {
