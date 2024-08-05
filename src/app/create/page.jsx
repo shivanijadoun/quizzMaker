@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Header from '../components/Header';
+import Footer from '../components/Footer'
 
 export default function CreateQuiz() {
   const [questions, setQuestions] = useState([]);
@@ -32,7 +34,8 @@ export default function CreateQuiz() {
     router.push('/quizzes');
   };
 
-  return (
+  return (<>
+        {/* <Header></Header> */}
     <div className="flex flex-row items-center p-4 bg-teal-300 min-h-screen">
       <div>
       <h2 className="text-2xl font-bold m-4">Create a Quiz</h2>
@@ -95,5 +98,7 @@ export default function CreateQuiz() {
         ))}
       </div>
     </div>
+    {/* <Footer></Footer> */}
+    </>
   );
 }
