@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
-// import Modal from '@/app/components/model';
+import Modal from '@/app/components/model';
 
 export default function Quiz() {
   const params = useParams();
@@ -67,9 +67,9 @@ export default function Quiz() {
       <button onClick={handleSubmit} className="px-4 py-2 bg-teal-800 text-white rounded">
         Submit
       </button>
-      {/* <Modal show={showResults} onClose={() => setShowResults(false)}>
+      <Modal show={showResults} onClose={() => setShowResults(false)}>
         <p>Your score: {score}/{quiz.length}</p>
-      </Modal> */}
+      </Modal>
     </div>
   );
 }
