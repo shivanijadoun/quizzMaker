@@ -24,15 +24,15 @@ export default function Quizzes() {
       {quizzes.length === 0 ? (
         <p>No quizzes available. Create one!</p>
       ) : (
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap justify-center'>
           {quizzes.map((quiz, index) => (
-            <div key={index} className="m-4 p-2 border rounded bg-teal-700 h-48 w-48 text-white relative">
+            <div key={index} className="m-4 p-2 border rounded bg-teal-700 h-48 w-48 text-white relative flex flex-col items-center">
               <Link href={`/quiz/${index}`}>
                 <h1 className="cursor-pointer">Quiz {index + 1}</h1>
               </Link>
               <button
                 onClick={() => handleDeleteQuiz(index)}
-                className="absolute top-0 right-0 mt-2 mr-2 px-2 py-1 bg-teal-700 text-white rounded"
+                className="absolute top-0 right-0 mt-2 mr-2 px-2 py-1 bg-teal-600 text-white rounded"
               >
                 <FontAwesomeIcon icon={faTrash} />
               </button>
